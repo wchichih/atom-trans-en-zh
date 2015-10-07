@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle trans-en-zh'
+      'command': 'Trans-en-zh:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'trans-en-zh'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'trans-en-zh:toggle'
+        }
+      ]
+    ]
+  }
+]
