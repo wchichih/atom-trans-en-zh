@@ -8,7 +8,7 @@ module.exports = TransEnZh =
 
   activate: (state) ->
     @transEnZhView = new TransEnZhView(state.transEnZhViewState)
-    @buttomPanel = atom.workspace.addBottomPanel(item: @transEnZhView.getElement(), visible: false)
+    @modalPanel = atom.workspace.addModalPanel(item: @transEnZhView.getElement(), visible: false)
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
@@ -25,14 +25,14 @@ module.exports = TransEnZh =
     transEnZhViewState: @transEnZhView.serialize()
 
   toggle: ->
-    if @buttomPanel.isVisible()
-      @buttomPanel.hide()
+    if @modalPanel.isVisible()
+      @modalPanel.hide()
     else
       editor = atom.workspace.getActiveTextEditor()
       word = editor.getSelectedText()
       if word.length == 0
         @transEnZhView.getNothing()
-        @buttomPanel.show()
+        @modalPanel.show()
       else
         @transEnZhView.getYoudao(word, @transEnZhView.gotIt)
-        @buttomPanel.show()
+        @modalPanel.show()
