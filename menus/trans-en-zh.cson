@@ -3,7 +3,7 @@
   'atom-text-editor': [
     {
       'label': 'Toggle trans-en-zh'
-      'command': 'Trans-en-zh:toggle'
+      'command': 'trans-en-zh:toggle'
     }
   ]
 'menu': [

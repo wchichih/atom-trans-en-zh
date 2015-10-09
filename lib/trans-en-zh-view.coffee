@@ -63,15 +63,15 @@ class TransEnZhView
       @element.children[1].innerHTML = jsonData.translation
       pronounce = ''
       explains = ''
-      webexplains = '<p class=\"webexplains\">网络释义</p>'
+      webexplains = '<div class=\"webexplains\">网络释义</div>'
       if jsonData.basic != undefined
         if jsonData.basic['uk-phonetic'] != undefined
-          pronounce = pronounce + '英 [' + jsonData.basic['uk-phonetic'] + ']   '
+          pronounce = pronounce + '英 [' + jsonData.basic['uk-phonetic'] + ']    '
         if jsonData.basic['us-phonetic'] != undefined
-          pronounce = pronounce + '美 [' + jsonData.basic['us-phonetic'] + ']   '
+          pronounce = pronounce + '美 [' + jsonData.basic['us-phonetic'] + ']    '
         else if jsonData.basic.phonetic != undefined
           pronounce = '[' + jsonData.phonetic + ']'
-        pronounce = pronounce + '<br />'
+        pronounce = '<div class=\"pronounce\">' + pronounce + '</div><br />'
         if jsonData.basic.explains != undefined
           explains = explains + i + '<br />' for i in jsonData.basic.explains
       @element.children[2].innerHTML = pronounce + explains + '<hr />'
