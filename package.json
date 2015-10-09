@@ -1,10 +1,9 @@
 {
   "name": "trans-en-zh",
   "main": "./lib/trans-en-zh",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple translator.",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "trans-en-zh:toggle"
   },
@@ -13,6 +12,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
