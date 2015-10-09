@@ -29,10 +29,11 @@ module.exports = TransEnZh =
       @modalPanel.hide()
     else
       editor = atom.workspace.getActiveTextEditor()
-      word = editor.getSelectedText()
-      if word.length == 0
-        @transEnZhView.getNothing()
-        @modalPanel.show()
-      else
-        @transEnZhView.getYoudao(word, @transEnZhView.gotIt)
-        @modalPanel.show()
+      if editor != undefined
+        word = editor.getSelectedText()
+        if word.length == 0
+          @transEnZhView.getNothing()
+          @modalPanel.show()
+        else
+          @transEnZhView.getYoudao(word, @transEnZhView.gotIt)
+          @modalPanel.show()
