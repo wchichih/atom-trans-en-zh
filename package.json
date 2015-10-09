@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "trans-en-zh:toggle"
   },
-  "repository": "https://github.com/atom/trans-en-zh",
+  "repository": "https://github.com/alim0x/atom-trans-en-zh",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
