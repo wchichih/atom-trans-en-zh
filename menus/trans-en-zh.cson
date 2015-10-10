@@ -2,7 +2,7 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle trans-en-zh'
+      'label': 'Lookup word'
       'command': 'trans-en-zh:toggle'
     }
   ]
@@ -10,10 +10,10 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'trans-en-zh'
+      'label': 'Trans-en-zh'
       'submenu': [
         {
-          'label': 'Toggle'
+          'label': 'Lookup word'
           'command': 'trans-en-zh:toggle'
         }
       ]

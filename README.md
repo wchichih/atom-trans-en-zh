@@ -13,10 +13,8 @@ apm install trans-en-zh
 ### Key Bindings
 
 *by default*
-```cson
-'atom-workspace':
-  'F10': 'trans-en-zh:toggle'
-```
+
+`alt-q` : **lookup selected word** and **close result panel**
 
 ### License
 
